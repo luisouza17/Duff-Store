@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'puro-malte', loadChildren: './puro-malte/puro-malte.module#PuroMaltePageModule' },
   { path: 'pilsen', loadChildren: './pilsen/pilsen.module#PilsenPageModule' },
   { path: 'larger', loadChildren: './larger/larger.module#LargerPageModule' },
+  { path: 'cerveja-detalhes', loadChildren: './cerveja-detalhes/cerveja-detalhes.module#CervejaDetalhesPageModule' },
 ];
 
 @NgModule({
