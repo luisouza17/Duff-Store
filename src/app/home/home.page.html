@@ -3,6 +3,11 @@
     <ion-title id="title1">
       Duff Store
     </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]='["/add-cerveja"]'>
+        <ion-icon name="add-circle" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -14,7 +19,6 @@
       Conheça nossas cervejas
   </h2>
   <br>
-  <ion-button color="warning" expand="block" [routerLink]="['/puro-malte']">Puro Malte</ion-button>
-  <ion-button color="danger" expand="block" [routerLink]="['/pilsen']">Pilsen</ion-button>
-  <ion-button color="secondary" expand="block" [routerLink]="['/larger']">Lager</ion-button>
+
+  
 </ion-content>
