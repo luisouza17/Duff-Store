@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-        <ion-back-button></ion-back-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Adicione uma nova cerveja!</ion-title>
   </ion-toolbar>
@@ -13,17 +13,26 @@
       <ion-label color="warning" position="floating">
         Nome da Cerveja:
       </ion-label>
-      <ion-input name="nome"ngModel></ion-input>
+      <ion-input name="nome" ngModel></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label color="warning" position="floating">
-        Descrição:
-      </ion-label>
-      <ion-textarea name="descricao" ngModel></ion-textarea>
-    </ion-item>
-      <ion-button color="warning" type="submit"> Salvar
-        <ion-icon name="checkmark-circle"></ion-icon>
-      </ion-button>
+    <ion-list>
+      <ion-radio-group>
+        <ion-list-header>
+          Tipo
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Puro Malte</ion-label>
+          <ion-radio value="puro malte" slot="end"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>Lager</ion-label>
+            <ion-radio value="lager" slot="end"></ion-radio>
+          </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-button color="warning" type="submit"> Salvar
+      <ion-icon name="checkmark-circle"></ion-icon>
+    </ion-button>
   </form>
   {{mensagem}}
 </ion-content>
