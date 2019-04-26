@@ -6,24 +6,30 @@ import { ViewCompiler } from '@angular/compiler';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {  
-  cervejas;
+export class HomePage implements OnInit {
+  constructor(){
+    this.cervejas = []
+  }
 
-  ngOnInit(){
-  }  
-  ionViewDidEnter(){
+  ngOnInit(){}
+  
+  excluir(nome){
+    localStorage.removeItem(nome);
+  }
+
+  cervejas;
+  
+  ionViewDidEnter() {
     this.cervejas = [];
 
-    const chavesdisponiveis = sessionStorage.getItem('chaves');
+    const tamanhodobanco = localStorage.length
+
+    for(let index = 0; index < tamanhodobanco.length; index++) {
+      const chave = localStorage.key(index);
+      const cerveja = localStorage.getItem(chave);
     
-    const chavesseparadas = chavesdisponiveis.split(';');
-    
-    for(var i = 0 ; i<chavesseparadas.length; i++){
-      const cerveja = sessionStorage.getItem(chavesseparadas[i]);
-      const cervejaObj = JSON.parse(cerveja);
-      this.cervejas.push(cervejaObj); 
-    
+      
     }
-    }
-  
+  }
+
 }
